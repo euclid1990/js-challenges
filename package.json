@@ -3,7 +3,7 @@
     "watch": "esw -w --ext .js",
     "fix": "eslint --fix . --ext .js",
     "test": "mocha tests/**/*.js",
-    "coverage": "istanbul cover mocha tests/**/*.js && codecov"
+    "coverage": "istanbul cover _mocha tests/**/*.js  --reporter lcovonly -- -R spec && codecov"
   },
   "devDependencies": {
     "chai": "^4.2.0",
