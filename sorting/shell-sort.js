@@ -11,7 +11,7 @@ function comparator(a, b) {
 
 /**
  * Shell sort algorithm.
- * Complexity: O(N^2).
+ * Complexity: O(N^(3/2)).
  *
  * @example
  * console.log(shellSort([2, 5, 1, 0, 4])); // [ 0, 1, 2, 4, 5 ]
