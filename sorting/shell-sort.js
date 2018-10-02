@@ -32,7 +32,7 @@ function shellSort(arr, cmp) {
     var increment = arr.length / 2;
     cmp = cmp || comparator;
     while (increment > 0) {
-        for (i = increment; i < arr.length; i++) {
+        for (let i = increment; i < arr.length; i++) {
             var j = i;
             var temp = arr[i];
             while (cmp(j, increment) >= 0 && cmp(arr[j-increment], temp) > 0) {
