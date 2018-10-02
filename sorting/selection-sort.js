@@ -7,6 +7,12 @@
 
 'use strict';
 
+function swap(array, i, j) {
+  let temp = array[i];
+  array[i] = array[j];
+  array[j] = temp;
+}
+
 /**
  * Selection sort algorithm.
  * Complexity: O(N^2).
@@ -21,7 +27,6 @@
  */
 function selectionSort(array) {
   let minIdx;
-  let temp;
   const len = array.length;
   for (let i = 0; i < len; i++) {
     minIdx = i;
@@ -30,9 +35,7 @@ function selectionSort(array) {
         minIdx = j;
       }
     }
-    temp = array[i];
-    array[i] = array[minIdx];
-    array[minIdx] = temp;
+    swap(array, i, minIdx);
   }
   return array;
 }
