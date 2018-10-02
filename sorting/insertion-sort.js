@@ -6,13 +6,6 @@
  */
 
 'use strict';
-
-function swap(arr, i, j) {
-  let temp = arr[i];
-  arr[i] = arr[j];
-  arr[j] = temp;
-}
-
 /**
  * Insertion sort algorithm.
  * Complexity: O(N^2).
