@@ -6,7 +6,7 @@
  */
 
 
-var countSort = function(arr, min, max) {
+  function countSort(arr, min, max) {
     var i, z = 0, count = [];
  
     for (i = min; i <= max; i++) {
