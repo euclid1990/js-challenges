@@ -15,17 +15,17 @@
  * console.log(selectionSort([2, 5, 1, 0, 4])); // [ 0, 1, 2, 4, 5 ]
  *
  * @public
- * @module sorting/bubblesort
+ * @module sorting/selectionsort
  * @param {Array} array Input array.
  * @return {Array} Sorted array.
  */
 function selectionSort(array) {
-  var minIdx;
-  var temp;
-  var len = array.length;
-  for (var i = 0; i < len; i++) {
+  let minIdx;
+  let temp;
+  const len = array.length;
+  for (let i = 0; i < len; i++) {
     minIdx = i;
-    for (var j = i + 1; j < len; j++) {
+    for (let j = i + 1; j < len; j++) {
       if (array[j] < array[minIdx]) {
         minIdx = j;
       }
