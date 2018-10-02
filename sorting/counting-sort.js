@@ -40,3 +40,7 @@ var countSort = function(arr, min, max) {
  * zero, or positive value, depending on the arguments.
  * @return {Array} Sorted array.
  */
+
+
+
+module.exports = countSort;
