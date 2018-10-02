@@ -8,6 +8,8 @@
  * @public
  * @module sorting/counting-sort
  * @param {Array} arr Input array.
+ * @param {Integer/Float/Char} min Input minimum value of array.
+ * @param {Integer/Float/Char} max Input maximum value of array.
  * @return {Array} Sorted array.
  */
 
