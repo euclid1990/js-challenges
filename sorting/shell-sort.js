@@ -15,7 +15,7 @@ function comparator(a, b) {
  * Bubble sort algorithm.
  * Best Case Complexity: O(N*logN).
  * Worst Case Complexity: O(N*(logN)^2)
- * 
+ *
  * @example
  * console.log(shellSort([2, 5, 1, 0, 4])); // [ 0, 1, 2, 4, 5 ]
  *
@@ -29,24 +29,24 @@ function comparator(a, b) {
  */
 
 function shellSort(arr, cmp) {
-    var increment = arr.length / 2;
-    cmp = cmp || comparator;
-    while (increment > 0) {
-        for (let i = increment; i < arr.length; i++) {
-            var j = i;
-            var temp = arr[i];
-            while (cmp(j, increment) >= 0 && cmp(arr[j-increment], temp) > 0) {
-                arr[j] = arr[j-increment];
-                j = j - increment;
-            }
-            arr[j] = temp;
-        }
-        if (increment == 2) {
-            increment = 1;
-        } else {
-            increment = parseInt(increment*5 / 11);
-        }
+  var increment = arr.length / 2;
+  cmp = cmp || comparator;
+  while (increment > 0) {
+    for (let i = increment; i < arr.length; i++) {
+      var j = i;
+      var temp = arr[i];
+      while (cmp(j, increment) >= 0 && cmp(arr[j - increment], temp) > 0) {
+        arr[j] = arr[j - increment];
+        j = j - increment;
+      }
+      arr[j] = temp;
     }
+    if (increment === 2) {
+      increment = 1;
+    } else {
+      increment = parseInt(increment * 5 / 11);
+    }
+  }
   return arr;
 }
 
