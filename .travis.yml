@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - 6
+before_install:
+  - npm i -g yarn
+install:
+  - yarn install --ignore-scripts
+script:
+  - yarn eslint .
+  - yarn coverage
+cache:
+  yarn: true

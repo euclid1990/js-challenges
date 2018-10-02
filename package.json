@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "watch": "esw -w --ext .js",
+    "fix": "eslint --fix . --ext .js",
+    "test": "mocha tests/**/*.js",
+    "coverage": "istanbul cover mocha tests/**/*.js && codecov"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "codecov": "^3.1.0",
+    "eslint": "^5.3.0",
+    "eslint-config-standard": "^12.0.0-alpha.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "eslint-plugin-vue": "^5.0.0-beta.3",
+    "eslint-watch": "^4.0.2",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "standard": "^11.0.1"
+  }
+}

@@ -1,0 +1,15 @@
+# build
+build
+
+# dependencies
+node_modules
+
+# coverage
+coverage
+
+# cache files
+.cache
+
+# misc
+.DS_Store
+*.log
