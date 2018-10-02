@@ -4,8 +4,6 @@
  * Copyright (c) 2018, Azhar Mithani.
  * Licensed under the MIT License.
  */
-
-
   function countSort(arr, min, max) {
     var i, z = 0, count = [];
  
@@ -22,9 +20,7 @@
             arr[z++] = i;
         }
     }
- 
 }
-
 /**
  * Counting sort algorithm.
  * Complexity: O(n+k).
@@ -40,7 +36,4 @@
  * zero, or positive value, depending on the arguments.
  * @return {Array} Sorted array.
  */
-
-
-
 module.exports = countSort;
