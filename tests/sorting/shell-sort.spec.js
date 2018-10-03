@@ -1,8 +1,8 @@
 const chai = require('chai');
 const expect = chai.expect;
-const sort = require('../../sorting/insertion-sort.js');
+const sort = require('../../sorting/shell-sort.js');
 
-describe('Insertion sort', function() {
+describe('Shell Sort', function() {
   it('should work with empty arrays', function() {
     expect(sort([])).deep.equal([]);
   });
