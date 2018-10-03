@@ -1,11 +1,4 @@
 /**
- * Implement [Counting sort]
- *
- * Copyright (c) 2018, Sergio Mosquera.
- * Licensed under the MIT License.
- */
-
-/**
  * Counting sort algorithm.
  * Complexity: O(N).
  *
@@ -19,23 +12,27 @@
  * @param {Integer/Float/Char} max Input maximum value of array.
  * @return {Array} Sorted array.
  */
+
 function countingSort(arr, min, max) {
-    var i, z = 0, count = [];
+  var i;
+  var z = 0;
+  var count = [];
 
-    for (i = min; i <= max; i++) {
-        count[i] = 0;
-    }
+  for (i = min; i <= max; i++) {
+    count[i] = 0;
+  }
 
-    for (i = 0; i < arr.length; i++) {
-        count[arr[i]]++;
-    }
+  for (i = 0; i < arr.length; i++) {
+    count[arr[i]]++;
+  }
 
-    for (i = min; i <= max; i++) {
-        while (count[i]-- > 0) {
-            arr[z++] = i;
-        }
+  for (i = min; i <= max; i++) {
+    while (count[i]-- > 0) {
+      arr[z++] = i;
     }
-    return arr;
+  }
+
+  return arr;
 }
 
 module.exports = countingSort;
