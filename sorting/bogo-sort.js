@@ -8,18 +8,18 @@
 'use strict';
 
 function shuffler(arr) {
-    for (let i = arr.length; i > 0;) {
-        const j = Math.floor(Math.random() * (--i));
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-    }
-    return arr;
+  for (let i = arr.length; i > 0;) {
+    const j = Math.floor(Math.random() * (--i));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
 }
 
 function isSorted(arr) {
-    for (let i = 1; i < arr.length; i++) {
-        if (arr[i - 1] > arr[i]) return false;
-    }
-    return true;
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i - 1] > arr[i]) return false;
+  }
+  return true;
 }
 
 /**
@@ -38,11 +38,11 @@ function isSorted(arr) {
  * @return {Array} Sorted array.
  */
 function bogoSort(array, shuffle) {
-    shuffle = shuffle || shuffler;
-    while (!isSorted(array)) {
-        shuffler(array);
-    }
-    return array;
+  shuffle = shuffle || shuffler;
+  while (!isSorted(array)) {
+    shuffler(array);
+  }
+  return array;
 }
 
 module.exports = bogoSort;
