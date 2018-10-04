@@ -1,18 +1,17 @@
 /**
  * Implement [Insertion sort]
  *
- * Copyright (c) 2018, Ionut Alixandroae.
+ * Copyright (c) 2018, Puripat Arayasirikul.
  * Licensed under the MIT License.
  */
 
 'use strict';
-
 /**
- * Bubble sort algorithm.
+ * Insertion sort algorithm.
  * Complexity: O(N^2).
  *
  * @example
- * console.log(insertionSort([54, 26, 93, 17, 77, 31, 44, 55, 20])); // [ 17, 20, 26, 31, 44, 54, 55, 77, 93 ]
+ * console.log(insertionSort([2, 5, 1, 0, 4])); // [ 0, 1, 2, 4, 5 ]
  *
  * @public
  * @module sorting/insertionsort
@@ -20,14 +19,13 @@
  * @return {Array} Sorted array.
  */
 function insertionSort(array) {
-  for (var i = 0; i < array.length; i++) {
-    var temp = array[i];
-    var j = i - 1;
-    while (j >= 0 && array[j] > temp) {
-      array[j + 1] = array[j];
-      j--;
+  for (let i = 0; i < array.length; i++) {
+    let value = array[i]
+    let index = i - 1;
+    while (index >= 0 && array[index] > value) {
+      array[index + 1] = array[index];
+      array[index--] = value;
     }
-    array[j + 1] = temp;
   }
   return array;
 }
