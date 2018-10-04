@@ -1,16 +1,14 @@
 /**
  * Implement [Bubble sort]
  *
- * Copyright (c) 2018, Nguyen Van Vuong.
+ * Copyright (c) 2018, Nguyen Van Vuong, Raphael Tomé Santana.
  * Licensed under the MIT License.
  */
 
 'use strict';
 
 function swap(arr, i, j) {
-  let temp = arr[i];
-  arr[i] = arr[j];
-  arr[j] = temp;
+  [arr[i], arr[j]] = [arr[j], arr[i]];
 }
 
 function comparator(a, b) {
