@@ -11,7 +11,7 @@ function swap(arr, i, j) {
   [arr[i], arr[j]] = [arr[j], arr[i]];
 }
 
-function comparator(a, b) {
+function defaultCompare(a, b) {
   return a - b;
 }
 
@@ -25,21 +25,18 @@ function comparator(a, b) {
  * @public
  * @module sorting/bubblesort
  * @param {Array} array Input array.
- * @param {Function} cmp Optional. A function that defines an
+ * @param {Function} compare Optional. A function that defines an
  * alternative sort order. The function should return a negative,
  * zero, or positive value, depending on the arguments.
  * @return {Array} Sorted array.
  */
-function bubbleSort(array, cmp) {
-  cmp = cmp || comparator;
-  for (let i = 0; i < array.length; i += 1) {
-    for (let j = i; j > 0; j -= 1) {
-      if (cmp(array[j], array[j - 1]) < 0) {
+module.exports = function bubbleSort(array, compare = defaultCompare) {
+  for (let i = 0; i < array.length; i++) {
+    for (let j = i; j > 0; j--) {
+      if (compare(array[j], array[j - 1]) < 0) {
         swap(array, j, j - 1);
       }
     }
   }
   return array;
-}
-
-module.exports = bubbleSort;
+};
