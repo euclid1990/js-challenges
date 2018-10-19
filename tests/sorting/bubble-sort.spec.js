@@ -19,7 +19,7 @@ describe('Bubble Sort', function() {
   it('should support custom compare function', () => {
     const emptyStringFirst = (value) => !value ? -1 : 1;
     expect(sort(['a', 'b', '', 'c', ''], emptyStringFirst)).to.deep.equal(
-        ['', '', 'a', 'b', 'c',]
-    )
+      ['', '', 'a', 'b', 'c']
+    );
   });
 });

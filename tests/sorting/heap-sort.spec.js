@@ -19,6 +19,6 @@ describe('Heap Sort', function() {
   it('should work with custom comparator (descending order)', function() {
     let array = [2, 5, 1, 0, 4, 3, 30, 6, 2];
     array = sort(array, (a, b) => (b - a));
-    expect(array).to.be.sorted({descending: true});
+    expect(array).to.be.sorted({ descending: true });
   });
 });

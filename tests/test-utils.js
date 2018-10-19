@@ -1,5 +1,5 @@
 const chai = require('chai');
-chai.use(require("chai-sorted"));
+chai.use(require('chai-sorted'));
 const expect = chai.expect;
 
 module.exports = {

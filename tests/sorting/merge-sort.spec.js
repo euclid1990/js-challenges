@@ -14,6 +14,5 @@ describe('Merge Sort', function() {
   it('should work with non-sorted arrays', function() {
     let array = [2, 5, 1, 0, 4, 3];
     expect(sort(array)).to.be.sorted();
-
   });
 });

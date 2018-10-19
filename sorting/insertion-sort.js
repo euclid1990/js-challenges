@@ -20,7 +20,7 @@
  */
 function insertionSort(array) {
   for (let i = 0; i < array.length; i++) {
-    let value = array[i]
+    let value = array[i];
     let index = i - 1;
     while (index >= 0 && array[index] > value) {
       array[index + 1] = array[index];
